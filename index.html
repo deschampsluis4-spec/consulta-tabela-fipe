@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Tabela FIPE</title>
+</head>
+<body>
+    <h1>Consulta de Preços - Tabela FIPE 🚗</h1>
+
+    <p>Digite o código FIPE do veículo:</p>
+
+    <label for="inputFipe">Código FIPE:</label>
+    <input type="text" id="inputFipe" placeholder="Ex.: 001004-9">
+
+    <button id="btnConsultar" onclick="consultarPreco()">
+        Consultar Preço
+    </button>
+
+    <div id="status"></div>
+
+    <h2>Resultados</h2>
+    <ul id="listaResultados"></ul>
+
+    <script src="fipeApi.js"></script>
+</body>
+</html>
