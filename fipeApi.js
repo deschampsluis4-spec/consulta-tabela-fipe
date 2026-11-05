@@ -20,9 +20,13 @@ async function consultarPreco() {
             `https://brasilapi.com.br/api/fipe/preco/v1/${encodeURIComponent(inputFipe)}`
         );
 
-        if (!response.ok) {
-            throw new Error("Erro na consulta FIPE.");
-        }
+       
+if (!response.ok) {
+    throw new Error(
+        `Erro HTTP ${response.status}: ${response.statusText}`
+    );
+}
+
 
         const dados = await response.json();
 
